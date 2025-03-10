@@ -16,7 +16,7 @@ const PostItem = React.memo(({ item }) => (
       <View style={styles.emptyImage} />
     )}
     <Text style={styles.itemTitle}>{item.Caption || 'No Title'}</Text>
-    <Text style={styles.itemContent}>{item.about || 'No Description'}</Text>
+    
   </View>
 ));
 
