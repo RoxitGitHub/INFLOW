@@ -11,7 +11,7 @@ export default function Notification() {
     const fetchNotifications = async () => {
       try {
         console.log("Fetching notifications...");
-        const notifications = await getNotificationInbox(27249, 'zQw6jAMXIfTdTfeAd3eyND', takeNumber, skipNumber);
+        const notifications = await getNotificationInbox(28253, 'JrOfhcd94dTTzAkUCuABGw', takeNumber, skipNumber);
         console.log("Notifications fetched: ", notifications);
         setData(notifications);
       } catch (error) {
@@ -49,15 +49,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fafafa',
-    paddingTop: 15,
+    marginTop: 2,
   },
   notification: {
     flexDirection: 'row',
     alignItems: 'flex-start',
-    paddingVertical: 12,
-    paddingHorizontal: 16,
+    paddingHorizontal: 30,
     borderBottomWidth: 1,
     borderBottomColor: '#e0e0e0',
+    paddingTop: 25,
   },
   avatar: {
     width: 36,
