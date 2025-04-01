@@ -227,8 +227,8 @@ const styles = StyleSheet.create({
     borderBottomColor: '#e0e0e0',
   },
   logo: {
-    height: 50,
-    width: 50,
+    height: 100,
+    width: 100,
     marginBottom: 10,
   },
   username: {

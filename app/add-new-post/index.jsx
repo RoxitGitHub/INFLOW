@@ -320,17 +320,20 @@ export default function AddNewPost() {
   };
 
   return (
-    <ScrollView style={{ padding: 20 }}>
-      <Text style={{ fontFamily: 'outfit-medium', fontSize: 20 }}>Add New Post</Text>
+    <ScrollView style={{ padding: 30 }}>
+      {/* <Text style={{ fontFamily: 'outfit-medium', fontSize: 20 }}>Add New Post</Text> */}
 
       <Pressable onPress={mediaPicker}>
         {!media ? (
           <Image
             source={require('./../../assets/images/placeholder.jpg')}
-            style={{ width: 100, height: 100, borderRadius: 15, borderWidth: 1, borderColor: Colors.GRAY }}
+            style={styles.image}
           />
         ) : (
-          <Image source={{ uri: media }} style={{ width: 100, height: 100, borderRadius: 15 }} />
+          // <Image source={{ uri: media }} style={{ width: 100, height: 100, borderRadius: 15 }} />
+          <View style={styles.container}>
+            <Image source={{uri: media}} style={styles.image}/>
+          </View>
         )}
       </Pressable>
 
@@ -363,7 +366,9 @@ export default function AddNewPost() {
 
 const styles = StyleSheet.create({
   inputContainer: { marginVertical: 5 },
-  input: { padding: 15, backgroundColor: '#fff', borderRadius: 7, fontFamily: 'outfit' },
-  label: { marginVertical: 5, fontFamily: 'outfit' },
-  button: { padding: 15, backgroundColor: Colors.Blue, borderRadius: 7, marginVertical: 10, marginBottom: 50 }
+  input: { padding: 15, backgroundColor: '#fff', borderRadius: 8, fontFamily: 'outfit' },
+  label: { marginVertical: 10, fontFamily: 'outfit' },
+  button: { padding: 15, backgroundColor: '#007AFF', borderRadius: 8, marginTop: 25, marginBottom: 15 },
+  container:{ flex: 1, justifyContent: 'center', alignItems: 'center'},
+  image:{width: '100%', height: 250, borderRadius: 12, borderWidth: 0.25, borderColor: 'gray', marginVertical: 15}
 });

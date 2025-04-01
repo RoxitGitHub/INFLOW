@@ -194,7 +194,7 @@ export default function DynamicProfile() {
             </TouchableOpacity>
           ))}
         </View>
-        <Text style={styles.sectionHeader}>{activeSection}</Text>
+        {/* <Text style={styles.sectionHeader}>{activeSection}</Text> */}
       </>
     );
   };
@@ -215,7 +215,8 @@ export default function DynamicProfile() {
 }
 
 const styles = StyleSheet.create({
-  scrollContainer: { padding: 20 },
+  all:{ backgroundColor: '#fff', marginTop: 2},
+  scrollContainer: { padding: 0 },
   loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center' },
   imageContainer: { alignItems: 'center', marginVertical: 25 },
   image: { width: 100, height: 100, borderRadius: 50 },
@@ -225,16 +226,16 @@ const styles = StyleSheet.create({
   followerContainer: { alignItems: 'center', marginTop: 5 },
   followerCount: { fontSize: 24, fontWeight: 'bold', color: 'black' },
   followerLabel: { fontSize: 14, color: 'gray' },
-  followButton: { marginTop: 10, padding: 10, backgroundColor: '#007AFF', borderRadius: 5 },
+  followButton: { marginTop: 10, padding: 10, backgroundColor: '#007AFF', borderRadius: 8 },
   followButtonText: { color: 'white', fontWeight: 'bold' },
   tabsContainer: { flexDirection: 'row', justifyContent: 'space-around', marginVertical: 20 },
   tab: { paddingVertical: 10, paddingHorizontal: 20, borderBottomWidth: 2, borderBottomColor: 'transparent' },
-  activeTab: { borderBottomColor: 'black' },
-  tabText: { fontSize: 16, fontWeight: 'bold' },
+  activeTab: { borderBottomColor: '#007AFF' },
+  tabText: { fontSize: 18, fontWeight: 'bold' },
   sectionHeader: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
-  itemContainer: { backgroundColor: '#fff', padding: 15, borderRadius: 5, marginVertical: 5 },
-  postImage: { width: '100%', height: 200, resizeMode: 'cover', borderRadius: 5, marginBottom: 10 },
-  emptyImage: { width: '100%', height: 200, backgroundColor: '#ddd', borderRadius: 5, marginBottom: 10 },
-  itemTitle: { fontSize: 16, fontWeight: 'bold' },
+  itemContainer: { backgroundColor: '#fff', padding: 25, borderRadius: 0, marginVertical: 2 },
+  postImage: { width: '100%', height: 200, resizeMode: 'cover', borderRadius: 8, marginBottom: 15 },
+  emptyImage: { width: '100%', height: 0, backgroundColor: '#ddd', borderRadius: 8, marginBottom: 0 },
+  itemTitle: { fontSize: 18, fontWeight: 'bold' },
   itemContent: { fontSize: 14, color: 'gray' },
 });

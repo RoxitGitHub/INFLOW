@@ -177,77 +177,97 @@ export default function LoginScreen() {
       >
         <View style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.4)", justifyContent: "center", paddingHorizontal: 20 }}>
           <View style={{ alignItems: "center", marginBottom: 50 }}>
-            <Text
+            <View
               style={{
-                fontFamily: "outfit-bold",
-                fontSize: 36,
-                textAlign: "center",
-                color: Colors.White,
-                textShadowColor: "rgba(0,0,0,0.8)",
-                textShadowOffset: { width: 1, height: 1 },
-                textShadowRadius: 4,
-                marginBottom: 10,
-              }}
-            >
-              Inflow
-            </Text>
-            <Text
-              style={{
-                fontFamily: "outfit",
-                fontSize: 16,
-                textAlign: "center",
-                color: Colors.White,
-                opacity: 0.9,
-                lineHeight: 24,
-              }}
-            >
-              Discover knowledge, explore ideas, and grow every day.
-            </Text>
-          </View>
-
-          <View style={{ justifyContent: "flex-end", paddingHorizontal: 20 }}>
-            <Pressable
-              onPress={onPress}
-              style={{
-                padding: 16,
-                backgroundColor: Colors.Blue,
-                borderRadius: 14,
-                alignItems: "center",
-                shadowColor: "#000",
-                shadowOffset: { width: 0, height: 4 },
-                shadowOpacity: 0.4,
-                shadowRadius: 4,
-                elevation: 6,
+                position: "absolute",
+                top: 0,
+                alignSelf: "center",
+                marginTop: 200,
               }}
             >
               <Text
                 style={{
-                  fontFamily: "outfit-medium",
-                  fontSize: 18,
+                  fontFamily: "outfit-bold",
+                  fontSize: 100,
+                  textAlign: "center",
                   color: Colors.White,
-                  textTransform: "uppercase",
+                  textShadowColor: "rgba(0,0,0,0.8)",
+                  textShadowOffset: { width: 1, height: 1 },
+                  textShadowRadius: 4,
                 }}
               >
-                Get Started
+                Inflow
               </Text>
-            </Pressable>
+              <Text
+                style={{
+                  fontFamily: "outfit",
+                  fontSize: 19,
+                  textAlign: "center",
+                  color: Colors.White,
+                  opacity: 0.9,
+                  lineHeight: 24,
+                }}
+              >
+                Discover knowledge, explore ideas, and grow every day.
+              </Text>
+            </View>
           </View>
 
-          <Text
-            style={{
-              fontFamily: "outfit",
-              fontSize: 14,
-              color: Colors.White,
-              textAlign: "center",
-              marginTop: 20,
-              opacity: 0.8,
-            }}
-          >
-            By proceeding, you agree to our{" "}
-            <Text style={{ textDecorationLine: "underline" }}>Terms</Text> and{" "}
-            <Text style={{ textDecorationLine: "underline" }}>Privacy Policy</Text>.
-          </Text>
+
+          <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <View
+              style={{
+                position: "absolute",
+                bottom: 20,
+                width: "100%",
+                paddingHorizontal: 20,
+              }}
+            >
+              <Pressable
+                onPress={onPress}
+                style={{
+                  padding: 16,
+                  backgroundColor: '#007AFF',
+                  borderRadius: 14,
+                  alignItems: "center",
+                  shadowColor: "#000",
+                  shadowOffset: { width: 0, height: 4 },
+                  shadowOpacity: 0.4,
+                  shadowRadius: 4,
+                  elevation: 6,
+                }}
+              >
+                <Text
+                  style={{
+                    fontFamily: "outfit-medium",
+                    fontSize: 18,
+                    color: Colors.White,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  Get Started
+                </Text>
+              </Pressable>
+
+              <Text
+                style={{
+                  fontFamily: "outfit",
+                  fontSize: 14,
+                  color: Colors.White,
+                  textAlign: "center",
+                  marginTop: 14,
+                  opacity: 0.8,
+                }}
+              >
+                By proceeding, you agree to our{" "}
+                <Text style={{ textDecorationLine: "underline" }}>Terms</Text> and{" "}
+                <Text style={{ textDecorationLine: "underline" }}>Privacy Policy</Text>.
+              </Text>
+            </View>
+          </View>
+
         </View>
+
       </ImageBackground>
     </View>
   );

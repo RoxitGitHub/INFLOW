@@ -515,7 +515,7 @@ export default function Profile() {
         ))}
       </View>
 
-      <Text style={styles.sectionHeader}>{activeSection}</Text>
+      {/* <Text style={styles.sectionHeader}>{activeSection}</Text> */}
     </>
   );
 
@@ -546,12 +546,18 @@ export default function Profile() {
 }
 
 const styles = StyleSheet.create({
+  all:{
+    backgroundColor: '#fff',
+    marginTop: 2,
+    padding: 5,
+  },
+
   container: {
     flex: 1,
     backgroundColor: 'whitesmoke'
   },
   scrollContainer: {
-    padding: 20,
+    padding: 0,
   },
   loadingContainer: {
     flex: 1,
@@ -608,7 +614,7 @@ const styles = StyleSheet.create({
     borderBottomColor: 'transparent',
   },
   activeTab: {
-    borderBottomColor: 'black',
+    borderBottomColor: '#007AFF',
   },
   tabText: {
     fontSize: 16,
@@ -622,13 +628,8 @@ const styles = StyleSheet.create({
   itemContainer: {
     backgroundColor: '#fff',
     padding: 15,
-    borderRadius: 5,
+    borderRadius: 0,
     marginVertical: 5,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 2,
   },
   postImage: {
     width: '100%',

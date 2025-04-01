@@ -367,11 +367,10 @@ export default function ReelsList({ reels }) {
 const styles = StyleSheet.create({
   videoContainer: {
     backgroundColor: '#fff',
-    borderBottomWidth: 1,
-    borderColor: '#ddd',
-    paddingVertical: 10,
+    paddingTop: 10,
+    paddingBottom: 15,
     paddingHorizontal: 16,
-    marginBottom: 15,
+    marginBottom: 5,
   },
   header: {
     flexDirection: 'row',
@@ -404,8 +403,9 @@ const styles = StyleSheet.create({
   },
   video: {
     width: '100%',
-    height: 250,
-    borderRadius: 5,
+    height: 500,
+    borderRadius: 8,
+    marginBottom: 5
   },
   likeCommentContainer: {
     flexDirection: 'row',

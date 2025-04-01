@@ -112,6 +112,7 @@ import {
     container: {
       flex: 1,
       backgroundColor: "black",
+      width: '100%'
     },
     fullScreenCamera: {
       width: width,
@@ -128,12 +129,16 @@ import {
     stopButton: {
       backgroundColor: "red",
       padding: 15,
-      borderRadius: 10,
+      width: '20%',
+      borderRadius: 8,
+      alignItems: 'center'
     },
     flipButton: {
       backgroundColor: "blue",
       padding: 15,
-      borderRadius: 10,
+      width: '20%',
+      borderRadius: 8,
+      alignItems: 'center'
     },
     buttonText: {
       color: "white",
