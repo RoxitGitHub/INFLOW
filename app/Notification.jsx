@@ -1,6 +1,7 @@
 import { View, Text, FlatList, StyleSheet, Image } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import { getNotificationInbox } from 'native-notify';
+import registerNNPushToken from 'native-notify';
 
 export default function Notification() {
   const [data, setData] = useState([]);
@@ -11,7 +12,7 @@ export default function Notification() {
     const fetchNotifications = async () => {
       try {
         console.log("Fetching notifications...");
-        const notifications = await getNotificationInbox(28253, 'JrOfhcd94dTTzAkUCuABGw', takeNumber, skipNumber);
+        const notifications = await getNotificationInbox(29141, 'qUZdYz0IyHzGW1g7pVJQWM', takeNumber, skipNumber);
         console.log("Notifications fetched: ", notifications);
         setData(notifications);
       } catch (error) {

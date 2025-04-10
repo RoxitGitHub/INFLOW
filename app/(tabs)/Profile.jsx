@@ -316,6 +316,7 @@
 //   },
 // });
 
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity, ActivityIndicator, RefreshControl } from 'react-native';
 import { useUser } from '@clerk/clerk-expo';
@@ -364,14 +365,19 @@ const ReelItem = React.memo(({ item }) => {
 });
 
 const DebateItem = React.memo(({ item }) => {
+  const videoRef = React.useRef(null);
+  const [status, setStatus] = useState({});
+
   return (
     <View style={styles.itemContainer}>
       {item.mediaUrl ? (
         <Video
+          ref={videoRef}
           style={styles.postImage}
           source={{ uri: item.mediaUrl }}
           useNativeControls
           resizeMode="cover"
+          onPlaybackStatusUpdate={status => setStatus(() => status)}
         />
       ) : (
         <View style={styles.emptyImage} />
@@ -546,7 +552,7 @@ export default function Profile() {
 }
 
 const styles = StyleSheet.create({
-  all:{
+  all: {
     backgroundColor: '#fff',
     marginTop: 2,
     padding: 5,

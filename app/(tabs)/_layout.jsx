@@ -16,6 +16,7 @@ import Profile from './Profile';
 import DynamicProfile from './../../components/PostDetails/DynamicProfile'; // Import DynamicProfile
 import { View, StyleSheet, Text, BackHandler } from 'react-native';
 import { getUnreadNotificationInboxCount } from 'native-notify';
+import registerNNPushToken from 'native-notify';
 
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
@@ -28,7 +29,7 @@ function TabLayout() {
   useEffect(() => {
     const fetchUnreadCount = async () => {
       try {
-        const unreadCount = await getUnreadNotificationInboxCount(28253, 'JrOfhcd94dTTzAkUCuABGw');
+        const unreadCount = await getUnreadNotificationInboxCount(29141, 'qUZdYz0IyHzGW1g7pVJQWM');
         console.log("unreadCount: ", unreadCount);
         setUnreadNotificationCount(unreadCount);
       } catch (error) {
